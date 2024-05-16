@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    #info {
+      width: 300px;
+      /* 固定宽度 */
+      height: 400px;
+      /* 固定高度 */
+      overflow: auto;
+      /* 内容超出时自动显示滚动条 */
+      padding: 10px;
+      /* 内边距 */
+      font-size: 20px;
+      /* 文字大小 */
+    }
+  </style>
+
+  <title>Grounded 3D-LLM</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="https://unpkg.com/three@0.127.0/build/three.module.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Grounded 3D-LLM with Referent Tokens
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Yilun Chen<sup>1*</sup>,</span>
+              <span class="author-block">
+                Shuai Yang<sup>1,2*</sup>,</span>
+              <span class="author-block">
+                Haifeng Huang<sup>1,2*</sup>,</span>
+
+              <span class="author-block">Tai Wang<sup>1</sup>,</span>
+
+              <span class="author-block">Ruiyuan Lyu<sup>1</sup>,</span>
+              <br>
+              <span class="author-block">Runsen Xu<sup>3</sup>,</span>
+
+              <span class="author-block">Dahua Lin<sup>1,3</sup>,</span>
+
+              <span class="author-block">Jiangmiao Pang<sup>1&#8224;</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Shanghai AI Laboratory, <sup>2</sup>Zhejiang
+                University, <sup>3</sup>The Chinese University of Hong Kong</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution,<sup>&#8224;</sup>Indicates
+                  Corresponding Author</small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Dataset abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <!-- <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat
+          pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
+        </h2>
+      </div>
+    </div>
+  </section> -->
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Prior studies on 3D scene understanding have primarily developed specialized models for specific tasks or
+              required task-specific fine-tuning. In this study, we propose <i>Grounded 3D-LLM</i>, which explores the
+              potential of 3D large multi-modal models (3D LMMs) to consolidate various 3D vision tasks within a unified
+              generative framework. The model uses scene <i>referent</i> tokens as special noun phrases to reference
+              3D scenes, enabling the handling of sequences that interleave 3D and textual data. It offers a natural
+              approach for translating 3D vision tasks into language formats using task-specific instruction templates.
+              To facilitate the use of <i>referent</i> tokens in subsequent language modeling, we have curated
+              large-scale grounded language datasets that offer finer scene-text correspondence at the phrase level by
+              bootstrapping existing object labels. Subsequently, we introduced Contrastive LAnguage-Scene Pre-training
+              (CLASP) to effectively leverage this data, thereby integrating 3D vision with language models. Our
+              comprehensive evaluation covers open-ended tasks like dense captioning and 3D QA, alongside close-ended
+              tasks such as object detection and language grounding. Experiments across multiple 3D benchmarks reveal
+              the leading performance and the broad applicability of <i>Grounded 3D-LLM</i>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <!-- Your image here -->
+          <img src="static/images/generalist.jpg" width="90%" alt="Generalist outputs" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- End image carousel -->
+
+  <section class="section hero is-light" id="Contribution">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Contributions</h2>
+          <div class="content has-text-justified">
+            <p>
+              <!-- To summarize, our contributions are as follows: -->
+            <ul>
+              <li> We developed Grounded 3D-LLM, which first establishes a correspondence between 3D scenes and language
+                phrases through <i>referent</i> tokens. This method enhances scene referencing and effectively
+                supports 3D vision tasks in language modeling, including single- and multi-object grounding, along with
+                introducing 3D detection for the first time.
+              </li>
+              <li> We developed a carefully crafted automated 3D scene caption dataset curation pipeline that provides
+                <i>finer</i> correspondence at the <i>phrase</i> level. Experiments using CLASP in both supervised
+                and zero-shot text settings demonstrate the effectiveness of pre-training on this data for phrase-level
+                scene-text alignment.
+              </li>
+              <li> The <i>Grounded 3D-LLM</i> model tackles 3D grounding and language tasks generatively without the
+                need for specialized models. It achieves top-tier performance in most downstream tasks among generative
+                models, particularly in grounding problems, without task-specific fine-tuning.
+              </li>
+            </ul>
+            </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light" id="Contribution">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+            <p>
+              The training process for Grounded 3D-LLM is divided into two key steps. Firstly, CLASP utilizes extensive
+              scene-text annotations (at the phrase level) to pre-train a 3D point cloud encoder and a cross-modal
+              interactor. The subsequent step involves multi-task instruction tuning, which interlaces <i>referent</i>
+              tokens within the instructions and responses, thereby facilitating flexible 3D scene understanding tasks.
+            </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <img src="static/images/method.jpg" width="80%" alt="Our Framework" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small" id="PointCloudVisualization">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-fullwidth">
+          <h2 class="title is-3">Results Visualization</h2>
+          <div class="select is-rounded">
+            <select id="pointCloudSelector">
+              <option value="assets/scene0011_00">Scene 1</option>
+              <option value="assets/scene0050_00">Scene 2</option>
+              <option value="assets/scene0426_00">Scene 3</option>
+              <option value="assets/scene0086_00">Scene 4</option>
+              <option value="assets/scene0144_00">Scene 5</option>
+            </select>
+          </div>
+
+          <div class="select is-rounded">
+            <select id="caseSelector">
+              <option value="case1">Case 1</option>
+              <option value="case2">Case 2</option>
+              <option value="case3">Case 3</option>
+              <option value="case4">Case 4</option>
+            </select>
+          </div>
+
+          <div class="columns is-centered" style="position: relative; margin-top: 20px;">
+            <div class="control"
+              style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+              <label class="radio">
+                <input value="detection" type="radio" name="task"> <b>Object Detection</b>
+              </label>
+
+              <span style="width:5em"></span>
+
+              <label class="radio">
+                <input value="grounding" type="radio" name="task"> <b>Language Grounding</b>
+              </label>
+
+              <span style="width:5em"></span>
+
+              <label class="radio">
+                <input value="captioning" type="radio" name="task"> <b>Dense Captioning</b>
+              </label>
+
+              <span style="width:5em"></span>
+
+              <label class="radio">
+                <input value="reasoning" type="radio" name="task"> <b>Question Answering</b>
+              </label>
+
+              <span style="width:5em"></span>
+
+              <label class="radio">
+                <input value="dialogue" type="radio" name="task"> <b>Embodied Dialogue</b>
+              </label>
+
+              <span style="width:5em"></span>
+
+              <label class="radio">
+                <input value="planning" type="radio" name="task"> <b>Embodied Planning</b>
+              </label>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="hero-body">
+      <div class="container">
+        <div style="display: flex; margin-top: 20px;">
+          <div style="flex: 3; height: 400px; position: relative;">
+            <div id="pose_loading" style="position: absolute; left: 50%; top: 51.1%;"></div>
+            <canvas id="webgl_output" style="width: 100%; height: 100%;"></canvas>
+          </div>
+          <div id="info" style="flex: 2; font-size: 15px; padding: 10px;">
+            <span style="font-size: 25px; border-color: black;">Please select a task.</span>
+          </div>
+        </div>
+
+        <button id="toggleAnimation">Pause Rotation</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section hero is-light" id="Grounded Scene Caption Data">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Grounded Scene Caption Data</h2>
+          <div class="content has-text-justified">
+            <p>
+              We propose an automated grounded language dataset generation process utilizing ChatGPT and 2D
+              vision-language models to create the Grounded Scene Caption dataset (G-SceneCap):
+            <ul>
+              <li><i>Step 1: Bootstrapping object captions with GT label correction.</i> Using 3D real-scan datasets, we
+                annotate each object with the vision-language model CogVLM, using the images of the
+                largest visible areas. Inconsistent annotations are rectified using raw instance labels.
+              </li>
+              <li><i>Step 2: Condensing objects in local scenes into a caption.</i>
+                For each enumerated anchor object, we form an initial object set by randomly selecting a group of nearby
+                objects. Their captions and coordinates (x,y,z) are input into GPT-4 for captioning, which requires
+                referencing objects by their IDs in the format ``[object_phrase object_ID]'' in the caption.
+              </li>
+              <li>
+                <i>Step 3: Adding Rule-Based Relations into Captions.</i>
+                To enrich scene captions, we integrate program-generated spatial relationships from
+                Sr3D. By selecting an anchor object from the set in <i>step 2</i>, we apply the
+                spatial relation rules (e.g., between, supporting, nearest, back) to include related objects. GPT-4 then
+                combines these relationships into the prior caption from <i>step 2</i>.
+              </li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <!-- Your image here -->
+          <img src="static/images/datagen_pipeline.jpg" width="80%" alt="Pipeline of Grounded Scene Dataset Curation" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video carousel -->
+  <section class="section hero is-light">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="container">
+          <h2 class="title is-3">Example Visualization of Grounded Scene Caption Dataset</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-video1">
+              <video poster="" id="video1" autoplay controls muted loop height="100%">
+                <!-- Your video file here -->
+                <source src="static/videos/scene0027_00.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video2">
+              <video poster="" id="video2" autoplay controls muted loop height="100%">
+                <!-- Your video file here -->
+                <source src="static/videos/scene0092_00.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video3">
+              <video poster="" id="video3" autoplay controls muted loop height="100%">\
+                <!-- Your video file here -->
+                <source src="static/videos/scene0240_00.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video4">
+              <video poster="" id="video4" autoplay controls muted loop height="100%">\
+                <!-- Your video file here -->
+                <source src="static/videos/scene0265_00.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+  <!-- Youtube video -->
+  <!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  <!-- End youtube video -->
+
+
+  <!-- Paper poster -->
+  <!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+  <!--End paper poster -->
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+<script type="module">
+  import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.114.0/build/three.module.js';
+  import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.114.0/examples/jsm/controls/OrbitControls.js';
+  import { PLYLoader } from 'https://cdn.jsdelivr.net/npm/three@0.114.0/examples/jsm/loaders/PLYLoader.js';
+
+  let loader = new PLYLoader();
+
+  let scene = new THREE.Scene();
+  let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  let canvas1 = document.querySelector('#webgl_output'); // Make sure this selector is correct
+  let canvas2 = document.querySelector('#webgl_output_dataset'); // Make sure this selector is correct
+  let renderer = new THREE.WebGLRenderer({
+    canvas: canvas1,
+    alpha: true,
+    antialias: true
+  });
+  renderer.setClearColor(0xffffff, 1); // Ensure white background with full opacity
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio * 2, 50)); // Adjust pixel ratio for high resolution
+  camera.position.y = 4;
+  let light = new THREE.AmbientLight(0x404040); // Example light
+  scene.add(light);
+  // let grid1 = new THREE.GridHelper(30, 30);
+  // scene.add(grid1);
+
+  let animateId = null;
+  let isAnimating = false;
+
+
+  function animate() {
+
+    animateId = requestAnimationFrame(animate);
+
+    // Rotate the camera only if isAnimating is true
+    if (isAnimating) {
+      var time = Date.now() * 0.001; // current time in seconds
+      camera.position.x = Math.sin(time) * 2; // 10 is the radius of the orbit
+      camera.position.z = Math.cos(time) * 2;
+      camera.lookAt(scene.position);
+    }
+    renderer.clear(); // Clear the canvas before rendering the scene
+    renderer.render(scene, camera);
+  }
+
+  // Start the animation loop
+  animate();
+
+  // Listen for button clicks to toggle animation
+  document.getElementById('toggleAnimation').addEventListener('click', function () {
+    isAnimating = !isAnimating; // Toggle the isAnimating state
+
+    // Update button text based on the animation state
+    if (isAnimating) {
+      this.textContent = 'Pause Rotation';
+      if (!animateId) {
+        animate(); // Restart animation if it was paused
+      }
+    } else {
+      this.textContent = 'Resume Rotation';
+      renderer.setAnimationLoop(() => {
+        renderer.clear(); // Clear the canvas before rendering the scene
+        renderer.render(scene, camera);
+      });
+    }
+  });
+
+
+  async function loadPointCloud(rootDirectory, filenames, clearAll) {
+    if (clearAll) {
+      scene.children = scene.children.filter(child => !(child instanceof THREE.Points));
+    } else {
+      scene.children = scene.children.filter(child => !(child instanceof THREE.Points && child.name !== 'instance_raw'));
+    }
+
+
+    try {
+      const geometry = await new Promise((resolve, reject) => {
+        loader.load(rootDirectory + '/instance_raw.ply', resolve, undefined, reject);
+      });
+
+      geometry.computeVertexNormals();
+
+      const pointsMaterial = new THREE.PointsMaterial({
+        size: 0.08,
+        vertexColors: true,
+        color: 0xffffff
+      });
+
+      const points = new THREE.Points(geometry, pointsMaterial);
+      points.rotation.x = -Math.PI / 2;
+      points.name = 'instance_raw';
+
+      scene.add(points);
+      console.log('instance_raw.ply loaded');
+    } catch (error) {
+      console.log('An error happened while loading instance_raw.ply:', error);
+    }
+    for (const filename of filenames) {
+      try {
+        const geometry = await new Promise((resolve, reject) => {
+          const fullPath = rootDirectory + '/' + filename;
+          loader.load(fullPath, resolve, undefined, reject);
+        });
+
+        geometry.computeVertexNormals();
+
+        const pointsMaterial = new THREE.PointsMaterial({
+          size: 0.08,
+          vertexColors: true,
+          color: 0xffffff
+        });
+
+        const points = new THREE.Points(geometry, pointsMaterial);
+        points.rotation.x = -Math.PI / 2;
+        points.name = 'pcd_' + filenames.indexOf(filename);
+
+        scene.add(points);
+        console.log(filename + ' loaded');
+      } catch (error) {
+        console.log('An error happened while loading ' + filename + ':', error);
+      }
+    }
+  }
+  let lastLoadedScene = "assets/scene0011_00";
+  document.addEventListener('DOMContentLoaded', function () {
+
+    const taskRadios = document.querySelectorAll('input[name="task"]');
+    const caseSelector = document.getElementById('caseSelector');
+
+    function updateCases(task) {
+      const optionsMap = {
+        'detection': [{ text: 'Case 1', value: 'case1' }, { text: 'Case 2', value: 'case2' }, { text: 'Case 3', value: 'case3' }, { text: 'Case 4', value: 'case4' }],
+        'grounding': [{ text: 'Case 1', value: 'case1' }, { text: 'Case 2', value: 'case2' }, { text: 'Case 3', value: 'case3' }, { text: 'Case 4', value: 'case4' }],
+        'captioning': [{ text: 'Case 1', value: 'case1' }, { text: 'Case 2', value: 'case2' }, { text: 'Case 3', value: 'case3' }, { text: 'Case 4', value: 'case4' }],
+        'reasoning': [{ text: 'Case 1', value: 'case1' }, { text: 'Case 2', value: 'case2' }, { text: 'Case 3', value: 'case3' }, { text: 'Case 4', value: 'case4' }],
+        'dialogue': [{ text: 'Case 1', value: 'case1' }],
+        'planning': [{ text: 'Case 1', value: 'case1' }]
+      };
+
+      let cases = optionsMap[task] || [];
+      caseSelector.innerHTML = ''; // Clear existing options
+      cases.forEach(function (c) {
+        let option = new Option(c.text, c.value);
+        caseSelector.add(option);
+      });
+    }
+
+    taskRadios.forEach(function (radio) {
+      radio.addEventListener('change', function () {
+        if (this.checked) {
+          updateCases(this.value);
+        }
+      });
+    });
+  });
+  function updateInfo() {
+    const scene = document.getElementById("pointCloudSelector").value;
+    const caseValue = document.getElementById("caseSelector").value;
+    console.log(scene)
+    // Collect the value of the checked radio button in 'task'
+    const taskRadios = document.querySelectorAll('input[name="task"]');
+    let taskValue = "";
+    for (const radio of taskRadios) {
+      if (radio.checked) {
+        taskValue = radio.value;
+        break;
+      }
+    }
+
+    // Fetch the JSON data once
+    fetch('assets/info.json')
+      .then(response => response.json())
+      .then(data => {
+        // Extract necessary data from the response
+        const rootDirectory = scene;
+        const filenames = data[scene][taskValue][caseValue]["ids"];
+        const text = data[scene][taskValue][caseValue]["text"];
+        const clearAll = (scene !== lastLoadedScene);
+        lastLoadedScene = scene;
+        // Update point cloud
+        loadPointCloud(rootDirectory, filenames, clearAll);
+
+        // Update additional information
+        document.getElementById("info").innerHTML = text;
+      })
+      .catch(error => {
+        console.error('Error fetching JSON:', error);
+      });
+  }
+
+  // Initially update the info based on the default selected options
+  updateInfo();
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Add event listeners that call updateInfo
+    document.getElementById("pointCloudSelector").addEventListener("change", updateInfo);
+    document.querySelectorAll('input[name="task"]').forEach(radio => {
+      radio.addEventListener("change", updateInfo);
+    });
+    document.getElementById("caseSelector").addEventListener("change", updateInfo);
+
+    // Initially update the info based on the default selected options
+    updateInfo();
+  });
+
+  let controls1 = new OrbitControls(camera, canvas1)
+  controls1.enableZoom = true
+  // controls2.enableDamping = true
+  controls1.object.position.set(camera.position.x, camera.position.y, camera.position.z)
+  controls1.target = new THREE.Vector3(0, 0, 0)
+  controls1.update()
+
+  loadPointCloud('assets/scene0011_00', ["instance_raw.ply"]); // Load the first point cloud by default
+
+  console.log("Script loaded and executing.");
+  window.addEventListener('resize', () => {
+    renderer.setSize(window.innerWidth * 0.7, 400);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  });
+</script>
+
+</html>

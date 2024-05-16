@@ -1,0 +1,739 @@
+{
+    "assets/scene0011_00": {
+        "detection": {
+            "case1": {
+                "text": "<p><strong>User:</strong> Catalog any chairs found within this indoor space.(with grounding)</p><p><strong>Assistant:</strong> Verification complete. The presence of <strong>&lt;p&gt; <span style=\"color: #faf025;\">chairs </span>&lt;/p&gt; <span style=\"color: #faf025;\">&lt;ref&gt;</span></strong> in this location is confirmed.</p>",
+                "ids": [
+                    "18_yellow.ply",
+                    "22_yellow.ply",
+                    "32_yellow.ply",
+                    "48_yellow.ply",
+                    "54_yellow.ply",
+                    "55_yellow.ply",
+                    "61_yellow.ply",
+                    "70_yellow.ply",
+                    "76_yellow.ply",
+                    "83_yellow.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User:</strong> Perform an inspection for all tables here.(with grounding)</p><p><strong>Assistant:</strong> Verification complete. The presence of a <strong>&lt;p&gt; <span style=\"color: #b31fca;\">table</span> &lt;/p&gt; <span style=\"color: #b31fca;\">&lt;ref&gt;</span></strong> in this location is confirmed.</p>",
+                "ids": [
+                    "77.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User:</strong> List all the doors visible in this indoor area.(with grounding)</p><p><strong>Assistant:</strong> Presence of a&nbsp;<strong>&lt;p&gt; <span style=\"color: #BF0089;\">door</span>&nbsp;&lt;/p&gt;&nbsp;<span style=\"color: #BF0089;\">&lt;ref&gt;</span></strong>&nbsp;in the indoor space confirmed.</p>",
+                "ids": [
+                    "88.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User:</strong> Can you find all sinks in the indoor environment?(with grounding)</p><p><strong>Assistant:</strong> Yes, I was able to locate a&nbsp;<strong>&lt;p&gt; <span style=\"color: #48bf00;\">sink</span>&nbsp;&lt;/p&gt;&nbsp;<span style=\"color: #48bf00;\">&lt;ref&gt;</span></strong>&nbsp;in the space for you.</p>",
+                "ids": [
+                    "27.ply"
+                ]
+            }
+        },
+        "grounding": {
+            "case1": {
+                "text": "<p><strong>User:</strong>&nbsp;Do you see the item that's described in these words: there is a black square tv; placed on the wall of the kitchen?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;The&nbsp;<strong>&lt;p&gt; <span style=\"color: #26bf00;\">object</span>&nbsp;&lt;/p&gt;&nbsp;<span style=\"color: #26bf00;\">&lt;ref&gt;</span></strong>&nbsp;, as described, has been located.</p>",
+                "ids": [
+                    "30.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User:</strong>&nbsp;Is it within your ability to find an item matching the description: the chair is one of four chairs facing the table; it is the second chair from the left?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've pinpointed the&nbsp;<strong>&lt;p&gt; <span style=\"color: #6b00bf;\">object</span>&nbsp;&lt;/p&gt;&nbsp;<span style=\"color: #6b00bf;\">&lt;ref&gt;</span></strong>&nbsp;you're looking for.</p>",
+                "ids": [
+                    "76.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User:</strong>&nbsp;Is there any chance you can spot what's described here: it is a narrow wood console table; the table sits in the kitchen, along the wall that has the tv; it sits under the tv?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've pinpointed the&nbsp;<strong>&lt;p&gt; <span style=\"color: #8200bf;\">object</span>&nbsp;&lt;/p&gt;&nbsp;<span style=\"color: #8200bf;\">&lt;ref&gt;</span></strong>&nbsp;you're looking for.</p>",
+                "ids": [
+                    "78.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User:</strong>&nbsp;I need your expertise in finding something. The task is as follows: this is a brown chair; it's back is to a thin table(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've pinpointed the <strong>&lt;p&gt; <span style=\"color: #0091bf;\">object</span>&nbsp;&lt;/p&gt;&nbsp;<span style=\"color: #0091bf;\">&lt;ref&gt;</span></strong> you're looking for.</p>",
+                "ids": [
+                    "54.ply"
+                ]
+            }
+        },
+        "captioning": {
+            "case1": {
+                "text": "<p><strong>User:</strong>Please offer a concise characterization of the <strong><span style=\"color: #b31fca;\">object&nbsp;&lt;ref&gt;</span></strong>.</p><p><strong>Assistant:</strong> A rectangular wooden table with a light brown finish.</p>",
+                "ids": [
+                    "77.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User:</strong>Can you deliver a brief report on the <strong><span style=\"color: #66ff3a;\">object&nbsp;&lt;ref&gt;</span></strong>?.</p><p><strong>Assistant:</strong> A flat-screen TV with a dark frame.</p>",
+                "ids": [
+                    "30.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User:</strong>Can you describe the <strong><span style=\"color: #da37f9;\">object&nbsp;&lt;ref&gt;</span></strong>'s form and then talk about how it's positioned with its environment?</p><p><strong>Assistant:</strong> this is a brown chair. it is at the table.</p>",
+                "ids": [
+                    "83.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User:</strong>&nbsp;How is the <strong><span style=\"color: #bf7200;\">object&nbsp;&lt;ref&gt;</span></strong> visually characterized, and what is its placement in respect to its surroundings?</p><p><strong>Assistant:</strong>&nbsp;this is a brown chair. it is near the end of the table.</p>",
+                "ids": [
+                    "10.ply"
+                ]
+            }
+        },
+        "reasoning": {
+            "case1": {
+                "text": "<p><strong>User:</strong> What color is the chair in the kitchen? Please answer with a single word or phrase.</p> <p> <strong>Assistant:</strong> brown </p>",
+                "ids": []
+            },
+            "case2": {
+                "text": "<p><strong>User:</strong> On what part of the kitchen is the black square tv located? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong> on right wall</p>",
+                "ids": []
+            },
+            "case3": {
+                "text": "<p><strong>User:</strong> What is under the long kitchen counter? Please answer with a single word or phrase.</p> <p><strong>Assistant:</strong> kitchen cabinets </p>",
+                "ids": []
+            },
+            "case4": {
+                "text": "<p><strong>User:</strong> Where does the trash can sit in the kitchen? Please answer with a single word or phrase.</p> <p><strong>Assistant:</strong> to left of refrigerator</p>",
+                "ids": []
+            }
+        },
+        "dialogue": {
+            "case1": {
+                "text": "<p><strong>User:</strong> Could you please move the brown upholstered armchair with angled armrests away from the kitchen cabinets? I need more space to open the <span style=\"color: #000000;\">drawers</span> fully. (with grounding)</p><p><strong>Assistant:</strong> Of course. I will carefully reposition <strong>&lt;p&gt; <span style=\"color: #bf0016;\">the dark-colored wooden bookshelf</span> &lt;/p&gt; <span style=\"color: #bf0016;\">&lt;ref&gt;</span></strong> to provide more space for you to open <strong>&lt;p&gt; <span style=\"color: #bfa000;\">the dark-colored wooden kitchen cabinets</span> &lt;/p&gt; <span style=\"color: #bfa000;\">&lt;ref&gt;</span></strong>. Please give me a moment to do so.</p><p><strong>User:</strong> Thank you. And do you think the white cylindrical trash can with a rounded lid should be closer to the polished kitchen counter? I believe it would be more convenient while cooking. (with grounding)</p><p><strong>Assistant:</strong> That does seem logical. I will position <strong>&lt;p&gt; <span style=\"color: #bf00a0;\">trash can</span> &lt;/p&gt; <span style=\"color: #bf00a0;\">&lt;ref&gt;</span></strong> nearer to <strong>&lt;p&gt; <span style=\"color: #bf0000;\">kitchen counter</span> &lt;/p&gt; <span style=\"color: #bf0000;\">&lt;ref&gt;</span></strong> to facilitate easier disposal while preparing food.</p><p><strong>User:</strong> Good idea. Now, can you tell me about the polished kitchen counter? What material is it made from? (with grounding)</p><p><strong>Assistant</strong>: <strong>&lt;p&gt; <span style=\"color: #bf0000;\">kitchen counter</span> &lt;/p&gt; <span style=\"color: #bf0000;\">&lt;ref&gt;</span></strong> is made of a light-colored granite material, which is durable and easy to clean.</p><p><strong>User:</strong> Interesting. And the design of the stainless steel cabinet with a wooden cabinet is a bit unusual. What's its purpose? (with grounding)</p><p><strong>Assistant:</strong> The design of <strong>&lt;p&gt; <span style=\"color: #bf00a0;\">the cabinet</span> &lt;/p&gt; <span style=\"color: #bf00a0;\">&lt;ref&gt;</span></strong> serves both aesthetic and functional purposes.It provides ample storage space for kitchen items while also contributing to the overall aesthetic of the kitchen.</p><p><strong>User:</strong> Last question, how do you think the placement of double-hung window affects the layout and ambiance of this kitchen? (with grounding)</p><p><strong>Assistant:</strong> if you're looking for a way to maximize natural light and create a welcoming atmosphere in your kitchen, <strong>&lt;p&gt; <span style=\"color: #009cbf;\">window</span> &lt;/p&gt; <span style=\"color: #009cbf;\">&lt;ref&gt;</span></strong> is the perfect solution. Its sleek design compliments the rest of the room's decor and allows for unobstructed access to the outdoors.</p>",
+                "ids": [
+                    "98.ply",
+                    "14.ply",
+                    "86.ply",
+                    "0.ply",
+                    "87.ply",
+                    "53.ply"
+                ]
+            },
+            "case2": {
+                "text": "pass",
+                "ids": [
+                    "22.ply",
+                    "76.ply",
+                    "77.ply",
+                    "18.ply",
+                    "11.ply"
+                ]
+            },
+            "case3": {
+                "text": "pass",
+                "ids": []
+            },
+            "case4": {
+                "text": "pass",
+                "ids": []
+            }
+        },
+        "planning": {
+            "case1": {
+                "text": "<p><strong>User:</strong>&nbsp;I aim to accomplish dispose of trash. (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Understood. Let's kick off the planning phase.</p><p>step 1. Gather trash from&nbsp;<strong>&lt;p&gt; <span style=\"color: #7600bf;\">table</span> &lt;/p&gt; <span style=\"color: #7600bf;\">&lt;ref&gt;</span></strong>.</p><p>step 2. Place trash into&nbsp;<strong>&lt;p&gt; <span style=\"color: #bf0072;\">trash can</span> &lt;/p&gt; <span style=\"color: #bf0072;\">&lt;ref&gt;</span></strong>.</p><p>step 3. Return&nbsp;<strong>&lt;p&gt; <span style=\"color: #bf0b00;\">trash can</span> &lt;/p&gt; <span style=\"color: #bf0b00;\">&lt;ref&gt;</span></strong>&nbsp;to original spot.</p><p>Finished planning. What's our next course of action?</p>",
+                "ids": [
+                    "77.ply",
+                    "90.ply",
+                    "1.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User:</strong>&nbsp;My objective is to clean the kitchen counter. Any guidance would be appreciated. (with grounding)</p><p><strong>Assistant:</strong> Affirmative. Let's get started with the planning.</p><p>step 1. Clear items from <strong>&lt;p&gt; <span style=\"color: #bf0000;\">kitchen counter</span> &lt;/p&gt; <span style=\"color: #bf0000;\">&lt;ref&gt;</span></strong>.</p><p>step 2. Wipe <strong>&lt;p&gt; <span style=\"color: #bf0000;\">kitchen counter</span> &lt;/p&gt; <span style=\"color: #bf0000;\">&lt;ref&gt;</span></strong> with a damp cloth.</p><p>step 3. Dry <strong>&lt;p&gt; <span style=\"color: #bf0000;\">kitchen counter</span> &lt;/p&gt; <span style=\"color: #bf0000;\">&lt;ref&gt;</span></strong> with a dry cloth.</p><p>step 4. Return items on <strong>&lt;p&gt; <span style=\"color: #bf0000;\">kitchen counter</span> &lt;/p&gt; <span style=\"color: #bf0000;\">&lt;ref&gt;</span></strong>.</p><p>I've finished the planning. What's our next move?</p>",
+                "ids": [
+                    "0.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User:</strong>&nbsp;I'm looking to organize the kitchen cabinet. Any help you could provide? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Noted. We'll start the planning process promptly.</p><p>step 1. Empty <strong>&lt;p&gt; <span style=\"color: #bfa000;\">kitchen cabinet</span> &lt;/p&gt;&nbsp;<span style=\"color: #bfa000;\">&lt;ref&gt;</span></strong>.</p><p>step 2. Clean <strong>&lt;p&gt; <span style=\"color: #bfa000;\">kitchen cabinet</span> &lt;/p&gt;&nbsp;<span style=\"color: #bfa000;\">&lt;ref&gt;</span></strong> with cloth.</p><p>step 3. Group similar items together.</p><p>step 4. Place unused items back in <strong>&lt;p&gt; <span style=\"color: #bfa000;\">cabinet</span> &lt;/p&gt;&nbsp;<span style=\"color: #bfa000;\">&lt;ref&gt;</span></strong>.</p><p>step 5. Close&nbsp;<strong>&lt;p&gt; <span style=\"color: #bfa000;\">cabinet</span>&nbsp;&lt;/p&gt;&nbsp;<span style=\"color: #bfa000;\">&lt;ref&gt;</span></strong>&nbsp;doors securely.</p><p>Planning is done. What's the next step in our process?</p>",
+                "ids": ["14.ply"]
+            },
+            "case4": {
+                "text": "pass",
+                "ids": [
+                    
+                ]
+            }
+        }
+    },
+    "assets/scene0050_00": {
+        "detection": {
+            "case1": {
+                "text": "<p><strong>User:</strong>&nbsp;Carry out a scan for all armchairs in this interior environment.(with grounding)</p><p><strong>Assistant:</strong>&nbsp;Quick check done. Yes, there is a <strong>&lt;p&gt; <span style=\"color: #bfac00;\">armchair</span> &lt;/p&gt; <span style=\"color: #bfac00;\">&lt;ref&gt;</span></strong> here.</p>",
+                "ids": [
+                    "15.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User:</strong>&nbsp;Can you point out all ceilings in this living space?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;Detected <strong>&lt;p&gt; <span style=\"color: #bf0044;\">ceiling</span> &lt;/p&gt;&nbsp;<span style=\"color: #bf0044;\">&lt;ref&gt;</span></strong> in this indoor scene.</p>",
+                "ids": [
+                    "94.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User:</strong>&nbsp;Hey, could you do a sweep for all doorframes in this room, Robot?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;Verification complete. The presence of <strong> &lt;p&gt; <span style=\"color: #ff9933;\">doorframes </span> &lt;/p&gt; <span style=\"color: #ff9933;\">&lt;ref&gt;</span></strong> in this location is confirmed.</p>",
+                "ids": [
+                    "34_orange.ply",
+                    "87_orange.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User:</strong>&nbsp;Initiate a search for all chairs in this location.(with grounding)</p><p><strong>Assistant:</strong>&nbsp;Verification complete. The presence of <strong>&lt;p&gt; <span style=\"color: #bf0072;\">chairs</span> &lt;/p&gt; <span style=\"color: #bf0072;\">&lt;ref&gt;</span></strong> in this location is confirmed.</p>",
+                "ids": [
+                    "90.ply"
+                ]
+            }
+        },
+        "grounding": {
+            "case1": {
+                "text": "<p><strong>User:</strong>&nbsp;I'm trying to locate an item, can you help with: it is a brown leather 2 person couch; it is sitting between a piano bench and the window?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've pinpointed the <strong>&lt;p&gt; <span style=\"color: #03bf00;\">object</span> &lt;/p&gt; <span style=\"color: #03bf00;\">&lt;ref&gt;</span></strong> you're looking for.</p>",
+                "ids": [
+                    "33.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User:</strong>&nbsp;I need your expertise in finding something. The task is as follows: the shelving unit is located on the wall next to the window; the shelving unit is above the desk(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've completed the search and found the <strong>&lt;p&gt; <span style=\"color: #bf0039;\">object</span> &lt;/p&gt; <span style=\"color: #bf0039;\">&lt;ref&gt;</span></strong>.</p>",
+                "ids": [
+                    "95.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User:</strong>&nbsp;Can you decipher this and find the item: this is a brown leather ottoman; &nbsp;there is a black backpack on it; &nbsp;there is a box of tissues on it; &nbsp;as a purple piece of paper on it?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I found the <strong>&lt;p&gt; <span style=\"color: #1a00bf;\">object</span> &lt;/p&gt;&nbsp;<span style=\"color: #1a00bf;\">&lt;ref&gt;</span></strong> based on your description.</p>",
+                "ids": [
+                    "69.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User:</strong>&nbsp;Can you assist in grounding these objects for me: a piano resides in the right corner near the door, with a green toolbox to its left and a red tool box lurking behind?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've successfully identified the <strong>&lt;p&gt; <span style=\"color: #5f00bf;\">object</span> &lt;/p&gt;&nbsp;<span style=\"color: #5f00bf;\">&lt;ref&gt;</span></strong>.</p>",
+                "ids": [
+                    "75.ply"
+                ]
+            }
+        },
+        "captioning": {
+            "case1": {
+                "text": "<p><strong>User: </strong>Start with the aesthetic details of the <strong><span style=\"color: #31BF00;\">object&nbsp;&lt;ref&gt;</span></strong>, then move on to discuss its location in comparison to its surroundings.</p><p><strong>Assistant:</strong>&nbsp;this is a brown desk. it is right in front of the door.</p>",
+                "ids": [
+                    "29.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>Detail the appearance of the <strong><span style=\"color: #BFAC00;\">object&nbsp;&lt;ref&gt;</span></strong>&nbsp;first, followed by a description of its local spatial relations.</p><p><strong>Assistant:</strong>&nbsp;this is a brown&nbsp;armchair. it is in front of the desk.</p>",
+                "ids": [
+                    "15.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>Begin by outlining the visual characteristics of the <strong><span style=\"color: #BF0072;\">object&nbsp;&lt;ref&gt;</span></strong>, followed by an account of its position relative to the objects around it.</p><p><strong>Assistant:</strong>&nbsp;this is a brown&nbsp;wooden&nbsp;chair. it is sitting next to the window.</p>",
+                "ids": [
+                    "90.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>Please provide a concise summary of the <strong><span style=\"color: #001EBF;\">object&nbsp;&lt;ref&gt;</span></strong>.</p><p><strong>Assistant:</strong>&nbsp;A wooden door with a dark brown finish.</p>",
+                "ids": [
+                    "64.ply"
+                ]
+            }
+        },
+        "reasoning": {
+            "case1": {
+                "text": "<p><strong>User: </strong>Where is the laptop located? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;on desk</p>",
+                "ids": []
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>The chair has its back to what? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;window</p>",
+                "ids": []
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>What color is the shelf on the breaker box? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;white</p>",
+                "ids": []
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>The shelf is up against what to the left of the dark grey breaker box? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;wall</p>",
+                "ids": []
+            }
+        },
+        "dialogue": {
+            "case1": {
+                "text": "<p><strong>User: </strong>Can you please move the black backpack from next to the piano and place it on the brown leather ottoman? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Certainly, I will relocate&nbsp;<strong>&lt;p&gt; <span style=\"color: #bbbf00;\">the backpack</span> &lt;/p&gt; <span style=\"color: #bbbf00;\">&lt;ref&gt;</span></strong> next to <strong>&lt;p&gt; <span style=\"color: #5f00bf;\">the piano</span> &lt;/p&gt; <span style=\"color: #5f00bf;\">&lt;ref&gt;</span></strong> and place it on <strong>&lt;p&gt; <span style=\"color: #1a00bf;\">brown leather ottoman</span> &lt;/p&gt; <span style=\"color: #1a00bf;\">&lt;ref&gt;</span></strong> for you.</p><p><strong>User: </strong>I noticed the piano looks quite elegant. Can you tell me, was it designed for professional use or just for a home setting? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;<strong>&lt;p&gt; <span style=\"color: #5f00bf;\">The polished wooden piano</span> &lt;/p&gt; <span style=\"color: #5f00bf;\">&lt;ref&gt;</span></strong> is designed for professional use.</p><p><strong>User: </strong>Since we're reorganizing, could you put the vibrant red toolbox and another toolbox into the storage area behind the wooden door with horizontal louvered panels and a brass knob? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Of course. I'll place <strong>&lt;p&gt; <span style=\"color: #bb00bf;\">the box</span> &lt;/p&gt; <span style=\"color: #bb00bf;\">&lt;ref&gt;</span></strong>&nbsp;and&nbsp;<strong>&lt;p&gt; <span style=\"color: #3100bf;\">the box</span> &lt;/p&gt; <span style=\"color: #3100bf;\">&lt;ref&gt;</span></strong> &nbsp;neatly into the storage area behind <strong>&lt;p&gt; <span style=\"color: #0091bf;\">the door</span> &lt;/p&gt; <span style=\"color: #0091bf;\">&lt;ref&gt;</span></strong>.</p><p><strong>User: </strong>While you do that, can you tell me why there are two different styles of wooden doors? What's their purpose? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;The two different styles of <strong>&lt;p&gt; door &lt;/p&gt; &lt;ref&gt;</strong> are designed for different purposes. <strong>&lt;p&gt; <span style=\"color: #0091bf;\">The light-colored door</span> &lt;/p&gt; <span style=\"color: #0091bf;\">&lt;ref&gt;</span></strong> is intended for aesthetic appeal, while <strong>&lt;p&gt; <span style=\"color: #001ebf;\">the darker door</span> &lt;/p&gt; <span style=\"color: #001ebf;\">&lt;ref&gt;</span></strong>&nbsp;is designed for security or privacy.</p><p><strong>User: </strong>Interesting. One last thing, could you tidy up the area and start the circular gray roomba to ensure the room is clean? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Of course. I will make sure <strong>&lt;p&gt; <span style=\"color: #bbbf00;\">the backpack</span> &lt;/p&gt; <span style=\"color: #bbbf00;\">&lt;ref&gt;</span></strong>&nbsp;is neatly stored and start <strong>&lt;p&gt; <span style=\"color: #00bf91;\">the circular gray roomba</span> &lt;/p&gt; <span style=\"color: #00bf91;\">&lt;ref&gt;</span></strong>.</p>",
+                "ids": [
+                    "17.ply",
+                    "69.ply",
+                    "75.ply",
+                    "83.ply",
+                    "71.ply",
+                    "11.ply",
+                    "64.ply",
+                    "54.ply",
+                    "46.ply"
+                ]
+            },
+            "case2": {
+                "text": "pass",
+                "ids": []
+            },
+            "case3": {
+                "text": "pass",
+                "ids": []
+            },
+            "case4": {
+                "text": "pass",
+                "ids": []
+            }
+        },
+        "planning": {
+            "case1": {
+                "text": "<p><strong>User:</strong>&nbsp;I plan to prepare the area for piano practice. (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Noted. We'll start the planning process promptly.</p><p>step 1. Position <strong>&lt;p&gt; <span style=\"color: #00bf13;\">piano bench</span> &lt;/p&gt; <span style=\"color: #00bf13;\">&lt;ref&gt;</span></strong>&nbsp;against wall.</p><p>step 2. Clear area around <strong>&lt;p&gt; <span style=\"color: #5f00bf;\">piano</span> &lt;/p&gt; <span style=\"color: #5f00bf;\">&lt;ref&gt;</span></strong>.</p><p>step 3. Adjust <strong>&lt;p&gt; <span style=\"color: #00bf13;\">bench</span> &lt;/p&gt; <span style=\"color: #00bf13;\">&lt;ref&gt;</span></strong> parallel to <strong>&lt;p&gt; <span style=\"color: #5f00bf;\">piano</span> &lt;/p&gt; <span style=\"color: #5f00bf;\">&lt;ref&gt;</span></strong>.</p><p>step 4. Ensure <strong>&lt;p&gt; <span style=\"color: #00bf13;\">bench</span> &lt;/p&gt; <span style=\"color: #00bf13;\">&lt;ref&gt;</span></strong> does not obstruct <strong>&lt;p&gt; <span style=\"color: #5f00bf;\">piano</span> &lt;/p&gt; <span style=\"color: #5f00bf;\">&lt;ref&gt;</span></strong>.</p><p>I've finished the planning. What's our next move?</p>",
+                "ids": [
+                    "75.ply",
+                    "35.ply"
+                ]
+            },
+            "case2": {
+                "text": "pass",
+                "ids": []
+            },
+            "case3": {
+                "text": "pass",
+                "ids": []
+            },
+            "case4": {
+                "text": "pass",
+                "ids": []
+            }
+        }
+    },
+    "assets/scene0426_00":{
+        "detection": {
+            "case1": {
+                "text": "<p><strong>User: </strong>Can you point out all chairs in this living space?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;Several <strong>&lt;p&gt; <span style=\"color: #ff9933;\">chairs</span> &lt;/p&gt; <span style=\"color: #ff9933;\">&lt;ref&gt;</span></strong> have been identified in this indoor setting.</p>",
+                "ids": [
+                    "12_orange.ply",
+                    "16_orange.ply",
+                    "84_orange.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>Try to give me all desks you can find.(with grounding)</p><p><strong>Assistant:</strong>&nbsp;Verification complete. The presence of a <strong>&lt;p&gt; <span style=\"color: #BB00BF;\">desk</span> &lt;/p&gt; <span style=\"color: #BB00BF;\">&lt;ref&gt;</span></strong> in this location is confirmed.</p>",
+                "ids": [
+                    "83.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>Robot, could you please scan this room for all windows and report back?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;Yes, I was able to locate a <strong>&lt;p&gt;<span style=\"color: #A4BF00;\"> window</span> &lt;/p&gt; <span style=\"color: #A4BF00;\">&lt;ref&gt;</span></strong> in the space for you.</p>",
+                "ids": [
+                    "19.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>I need a quick check for all tvs in here. Can you handle that?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;<strong>&lt;p&gt; <span style=\"color: #00BF13;\">tv</span> &lt;/p&gt; <span style=\"color: #00BF13;\">&lt;ref&gt;</span></strong> is indeed part of the furniture in this indoor scene.</p>",
+                "ids": [
+                    "35.ply"
+                ]
+            }
+        },
+        "grounding": {
+            "case1": {
+                "text": "<p><strong>User: </strong>I'm looking for something quite specific. Can you undertake this: this is a lamp and lamp shade in front of a door; it is between two sofa couches near a wall(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've pinpointed the <strong>&lt;p&gt; <span style=\"color: #bf0072;\">object</span> &lt;/p&gt; <span style=\"color: #bf0072;\">&lt;ref&gt;</span></strong> you're looking for.</p>",
+                "ids": [
+                    "90.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>I need your eyes, can you find what's detailed here: it is a black monitor; it is by the vertical side of a piano placed on a brown table?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;Yes, the <strong>&lt;p&gt; <span style=\"color: #76bf00;\">object</span> &lt;/p&gt; <span style=\"color: #76bf00;\">&lt;ref&gt;</span></strong> fitting your description is here.</p>",
+                "ids": [
+                    "23.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>Could you dedicate some time to finding: this is a painted white door with a brass handle; it is in the corner of a room with an office chair in front of it?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've pinpointed the <strong>&lt;p&gt; <span style=\"color: #006ebf;\">object</span> &lt;/p&gt; <span style=\"color: #006ebf;\">&lt;ref&gt;</span></strong> you're looking for.</p>",
+                "ids": [
+                    "57.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>Can you perform this specific locating task for me: there is a dresser with six drawers; it has a large flat screen tv on top of it(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've pinpointed the <strong>&lt;p&gt; <span style=\"color: #00bf7a;\">object</span> &lt;/p&gt; <span style=\"color: #00bf7a;\">&lt;ref&gt;</span></strong> you're looking for.</p>",
+                "ids": [
+                    "44.ply"
+                ]
+            }
+        },
+        "captioning": {
+            "case1": {
+                "text": "<p><strong>User: </strong>How is the <strong><span style=\"color: #76BF00;\">object&nbsp;&lt;ref&gt;</span></strong>&nbsp;visually characterized, and what is its placement in respect to its surroundings?</p><p><strong>Assistant:</strong>&nbsp;this is a black monitor. it is on the desk.</p>",
+                "ids": [
+                    "23.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>Describe the visual makeup of the <strong><span style=\"color: #BB00BF;\">object&nbsp;&lt;ref&gt;</span></strong>&nbsp;and follow up with how it fits into the surrounding area's spatial configuration.</p><p><strong>Assistant:</strong>&nbsp;this is a brown desk. it is in the corner next to the bed.</p>",
+                "ids": [
+                    "83.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>Give a detailed description of the <strong><span style=\"color: #54bf00;\">object&nbsp;&lt;ref&gt;</span></strong>'s look, followed by its situational context within the nearby vicinity.</p><p><strong>Assistant:</strong>&nbsp;this is a white pillow. it is on the bed.</p>",
+                "ids": [
+                    "26.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>Start with the aesthetic details of the <strong><span style=\"color: #a4bf00;\">object&nbsp;&lt;ref&gt;</span></strong>, then move on to discuss its location in comparison to its surroundings.</p><p><strong>Assistant:</strong>&nbsp;there is a square window. it is on the wall above the bed.</p>",
+                "ids": [
+                    "19.ply"
+                ]
+            }
+        },
+        "reasoning": {
+            "case1": {
+                "text": "<p><strong>User: </strong>What kind of desk is the electric piano on? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;brown&nbsp;wooden desk.</p>",
+                "ids": []
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>What is the black pillow on top of? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;bed</p>",
+                "ids": []
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>The dark green guitar case is to the right of which door? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;white door</p>",
+                "ids": []
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>Where does the black chair sit to the dresser? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;to right of dresser</p>",
+                "ids": []
+            }
+        },
+        "dialogue": {
+            "case1": {
+                "text": "<p><strong>User: </strong>Can you bring the sturdy black backpack and place it on the dark desk with white and green keys? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Certainly. I will move <strong>&lt;p&gt; <span style=\"color: #bfac00;\">the backpack</span>&nbsp;&lt;/p&gt; <span style=\"color: #bfac00;\">&lt;ref&gt;</span></strong> to <strong>&lt;p&gt; <span style=\"color: #bb00bf;\">the desk</span> &lt;/p&gt; <span style=\"color: #bb00bf;\">&lt;ref&gt;</span></strong> &nbsp;right away.</p><p><strong>User: </strong>Thanks. Also, can you describe the lamp to me? I'm thinking about redecorating soon. (with grounding)</p><p><strong>Assistant:</strong>&nbsp;<strong>&lt;p&gt; <span style=\"color: #bf0072;\">The tall, slender lamp</span>&nbsp;&lt;/p&gt; <span style=\"color: #bf0072;\">&lt;ref&gt;</span></strong>&nbsp;is a classic design with a white or light-colored shade. Its base is cylindrical and made of wood or similar material.</p><p><strong>User: </strong>It sounds elegant. I'm curious, why are the three monitors set up alongside the bed? Isn't that uncommon? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;The placement of&nbsp;<strong>&lt;p&gt; <span style=\"color: #8ac92d;\">mon</span><span style=\"color: #294cf6;\">itors</span> &lt;/p&gt; <span style=\"color: #8ac92d;\">&lt;r</span><span style=\"color: #294cf6;\">ef&gt;</span></strong> next to <strong>&lt;p&gt; <span style=\"color: #bf005b;\">the bed</span> &lt;/p&gt; <span style=\"color: #bf005b;\">&lt;ref&gt;</span></strong>&nbsp;is likely for entertainment and work.</p><p><strong>User: </strong>Makes sense. What's in the brown cardboard box? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;The <strong>&lt;p&gt; <span style=\"color: #bf9500;\">box</span> &lt;/p&gt; <span style=\"color: #bf9500;\">&lt;ref&gt;</span></strong> is used for storage or could contain items for shipping or organizing. Would you like me check the contents for you?</p><p><strong>User: </strong>No, that's fine. Could you arrange the pillows at the head of the bed neatly? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Certainly, I will place <strong>&lt;p&gt; <span style=\"color: #e03e2d;\">pill</span><span style=\"color: #7ddb27;\">ow</span> &lt;/p&gt; <span style=\"color: #e03e2d;\">&lt;r</span><span style=\"color: #7ddb27;\">ef&gt;</span></strong> at the head of <strong>&lt;p&gt; <span style=\"color: #bf005b;\">bed</span> &lt;/p&gt; <span style=\"color: #bf005b;\">&lt;ref&gt;</span></strong>&nbsp;to ensure a tidy appearance.</p>",
+                "ids": [
+                    "1.ply",
+                    "15.ply",
+                    "83.ply",
+                    "90.ply",
+                    "92.ply",
+                    "63.ply",
+                    "23.ply",
+                    "82.ply",
+                    "13.ply",
+                    "26.ply",
+                    "93.ply"
+                ]
+            },
+            "case2": {
+                "text": "pass",
+                "ids": [
+                ]
+            },
+            "case3": {
+                "text": "pass",
+                "ids": [
+                ]
+            },
+            "case4": {
+                "text": "pass",
+                "ids": [
+                ]
+            }
+        },
+        "planning": {
+            "case1": {
+                "text": "<p><strong>User: </strong>My objective is to achieve prepare the bed area. Could you provide some assistance? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Understood. Let's kick off the planning phase.</p><p>step 1. Straighten <strong>&lt;p&gt; <span style=\"color: #54bf00;\">pillow</span> &lt;/p&gt; <span style=\"color: #54bf00;\">&lt;ref&gt;</span></strong>.</p><p>step 2. Smooth out <strong>&lt;p&gt; <span style=\"color: #bf0b00;\">bedding</span> &lt;/p&gt; <span style=\"color: #bf0b00;\">&lt;ref&gt;</span></strong> on <strong>&lt;p&gt; <span style=\"color: #bf005b;\">bed</span> &lt;/p&gt; <span style=\"color: #bf005b;\">&lt;ref&gt;</span></strong>.</p><p>step 2. Fluff <strong>&lt;p&gt; <span style=\"color: #54bf00;\">pillow</span> &lt;/p&gt; <span style=\"color: #54bf00;\">&lt;ref&gt;</span></strong>.</p><p>step 3. Place <strong>&lt;p&gt; <span style=\"color: #54bf00;\">pillow</span> &lt;/p&gt; <span style=\"color: #54bf00;\">&lt;ref&gt;</span></strong> on <strong>&lt;p&gt; <span style=\"color: #bf005b;\">bed</span> &lt;/p&gt; <span style=\"color: #bf005b;\">&lt;ref&gt;</span></strong>.</p><p>Planning is done. What's the next step in our process?</p>",
+                "ids": [
+                    "26.ply",
+                    "1.ply",
+                    "92.ply"
+                ]
+            },
+            "case2": {
+                "text": "pass",
+                "ids": [
+                ]
+            },
+            "case3": {
+                "text": "pass",
+                "ids": [
+                ]
+            },
+            "case4": {
+                "text": "pass",
+                "ids": [
+                ]
+            }
+        }
+    },
+    "assets/scene0086_00": {
+        "detection": {
+            "case1": {
+                "text": "<p><strong>User: </strong>Robot, I'm curious, are there any windows present here?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;<strong>&lt;p&gt; <span style=\"color: #4800bf;\">window</span> &lt;/p&gt; <span style=\"color: #4800bf;\">&lt;ref&gt;</span></strong> is indeed part of the furniture in this indoor scene.</p>",
+                "ids": [
+                    "73.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>Initiate a search for all office chairs in this location.(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've searched the area but found no office chair, as per your request.</p>",
+                "ids": [
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>Can you find all toilets in the indoor environment?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;Yes, I was able to locate <strong>&lt;p&gt; <span style=\"color: #faf025;\">toilets </span>&lt;/p&gt; <span style=\"color: #faf025;\">&lt;ref&gt;</span></strong> in the space for you.</p>",
+                "ids": [
+                    "20_yellow.ply",
+                    "14_yellow.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>I need a quick check for all sinks in here. Can you handle that?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;Presence of <strong>&lt;p&gt; <span style=\"color: #faf025;\">sinks </span>&lt;/p&gt; <span style=\"color: #faf025;\">&lt;ref&gt;</span></strong> in the indoor space confirmed.</p>",
+                "ids": [
+                    "45_yellow.ply",
+                    "82_yellow.ply"
+                ]
+            }
+        },
+        "grounding": {
+            "case1": {
+                "text": "<p><strong>User: </strong>I'm in search of an item, can it be found here: this is an average looking rectangle white door for an office building or an apartment for the outer doors maybe to the stairs; it's to the left of the bathroom stall?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've pinpointed the <strong>&lt;p&gt; <span style=\"color: #00BF2A;\">object</span> &lt;/p&gt; <span style=\"color: #00BF2A;\">&lt;ref&gt;</span></strong> you're looking for.</p>",
+                "ids": [
+                    "37.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>I need to locate something, can you identify it: a bathrom stall door sits to the left of two sinks; just behind it is a toilet with a toilet-paper dispenser to its left, hangin on the wall?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've pinpointed the <strong>&lt;p&gt; <span style=\"color: #BF00B7;\">object</span> &lt;/p&gt; <span style=\"color: #BF00B7;\">&lt;ref&gt;</span></strong> you're looking for.</p>",
+                "ids": [
+                    "84.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>I'm in search of an item, can it be found here: a trash can hangs on the far wall in between the corner of the room and a paper towell dispenser; sinks are to the left of the dispenser?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've pinpointed the <strong>&lt;p&gt; <span style=\"color: #BF0000;\">object</span> &lt;/p&gt; <span style=\"color: #BF0000;\">&lt;ref&gt;</span></strong> you're looking for.</p>",
+                "ids": [
+                    "0.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>Could you assist with locating these objects a white toilet seat cover dispenser is mounted on the wall above the toilet?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've located the <strong>&lt;p&gt; <span style=\"color: #0F00BF;\">object</span> &lt;/p&gt; <span style=\"color: #0F00BF;\">&lt;ref&gt;</span></strong> you're looking for.</p>",
+                "ids": [
+                    "68.ply"
+                ]
+            }
+        },
+        "captioning": {
+            "case1": {
+                "text": "<p><strong>User: </strong>Narrate the <strong><span style=\"color: #00BF2A;\">object&nbsp;&lt;ref&gt;</span></strong>'s appearance first, then elucidate on its positioning in relation to the close environment.</p><p><strong>Assistant:</strong>&nbsp;this is a white door. it is to the left of the bathroom stall.</p>",
+                "ids": [
+                    "37.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>Describe the visual makeup of the <strong><span style=\"color: #BF3900;\">object&nbsp;&lt;ref&gt;</span></strong>&nbsp;and follow up with how it fits into the surrounding area's spatial configuration.</p><p><strong>Assistant:</strong>&nbsp;this is a white toilet. it is to the right of the trash can.</p>",
+                "ids": [
+                    "5.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>Narrate the <strong><span style=\"color: #00bf13;\">object&nbsp;&lt;ref&gt;</span></strong>'s appearance first, then elucidate on its positioning in relation to the close environment.</p><p><strong>Assistant:</strong>&nbsp;this is a white sink. it is attached in the wall with the other one.</p>",
+                "ids": [
+                    "35.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>Illustrate the physical features of the <strong><span style=\"color: #BF00B7;\">object&nbsp;&lt;ref&gt;</span></strong>&nbsp;and describe its location relative to nearby objects.</p><p><strong>Assistant:</strong>&nbsp;there is a rectangular bathroom stall door&nbsp;sits&nbsp;to the left of two sinks.&nbsp;just behind it is a toilet.</p>",
+                "ids": [
+                    "84.ply"
+                ]
+            }
+        },
+        "reasoning": {
+            "case1": {
+                "text": "<p><strong>User: </strong>What color is the paper towel dispenser? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;black</p>",
+                "ids": []
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>What shape is the tan paper towel dispenser? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;rectangular</p>",
+                "ids": []
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>What kind of dispenser is above the tan one? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;paper towel dispenser</p>",
+                "ids": []
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>What is the shape of the toilet in the stall? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;oval shape</p>",
+                "ids": []
+            }
+        },
+        "dialogue": {
+            "case1": {
+                "text": "<p><strong>User: </strong>I just realized we're out of toilet seat covers in the restroom. Can you restock a white toilet seat cover dispenser with some more? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Of course. I will replace <strong>&lt;p&gt; <span style=\"color: #bf6700;\">toilet seat covers</span> &lt;/p&gt; <span style=\"color: #bf6700;\">&lt;ref&gt;</span></strong> with fresh ones immediately.</p><p><strong>User: </strong>And could you tell me why there is a dual-roll toilet paper dispenser instead of a regular one? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;The dual-roll <strong>&lt;p&gt; <span style=\"color: #00bf1e;\">paper towel dispenser</span> &lt;/p&gt; <span style=\"color: #00bf1e;\">&lt;ref&gt;</span></strong>&nbsp;is designed to dispense paper towels in a more convenient and efficient way than a regular paper towel dispenser.</p><p><strong>User: </strong>That makes sense. Can you also empty a stainless steel rectangular trash can? It looks full. (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Of course, I will empty&nbsp;<strong>&lt;p&gt; <span style=\"color: #bf0022;\">trash can</span> &lt;/p&gt; <span style=\"color: #bf0022;\">&lt;ref&gt;</span></strong>&nbsp;for you.</p><p><strong>User: </strong>While you're at it, could you check another white porcelain bathroom stall for cleanliness and make sure it's well-stocked? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Absolutely, I will inspect <strong>&lt;p&gt; <span style=\"color: #a400bf;\">the bathroom stall</span> &lt;/p&gt; <span style=\"color: #a400bf;\">&lt;ref&gt;</span></strong>&nbsp;for cleanliness and make sure it's well-stocked.</p><p><strong>User: </strong>Last question: I noticed that another white porcelain bathroom stall has a bidet. What is its purpose? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;The purpose of <strong>&lt;p&gt; <span style=\"color: #bfa000;\">the bidet</span> &lt;/p&gt; <span style=\"color: #bfa000;\">&lt;ref&gt;</span></strong>&nbsp;is to provide a more personalized experience for users, allowing them to enjoy a more relaxing experience while using the restroom.</p>",
+                "ids": [
+                    "9.ply",
+                    "36.ply",
+                    "97.ply",
+                    "81.ply",
+                    "14.ply"
+                ]
+            },
+            "case2": {
+                "text": "pass",
+                "ids": []
+            },
+            "case3": {
+                "text": "pass",
+                "ids": []
+            },
+            "case4": {
+                "text": "pass",
+                "ids": []
+            }
+        },
+        "planning": {
+            "case1": {
+                "text": "<p><strong>User: </strong>I desire to polish the mirror and rail. Can you assist me with this? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Noted. We'll start the planning process promptly.</p><p>step 1. Spray cleaner on <strong>&lt;p&gt; <span style=\"color: #0057bf;\">mirror</span> &lt;/p&gt;<span style=\"color: #0057bf;\"> &lt;ref&gt;</span></strong>.</p><p>step 2. Wipe <strong>&lt;p&gt; <span style=\"color: #0057bf;\">mirror</span> &lt;/p&gt; <span style=\"color: #0057bf;\">&lt;ref&gt;</span></strong> with cloth.</p><p>step 3. Clean <strong>&lt;p&gt; <span style=\"color: #1b2ab5;\">rail</span> &lt;/p&gt; <span style=\"color: #1b2ab5;\">&lt;ref&gt;</span></strong> with cloth.</p><p>step 4. Dry <strong>&lt;p&gt; <span style=\"color: #1b2ab5;\">rail</span> &lt;/p&gt; <span style=\"color: #1b2ab5;\">&lt;ref&gt;</span></strong> with dry cloth.</p><p>Planning is done. What's the next step in our process?</p>",
+                "ids": [
+                    "59.ply",
+                    "65.ply"
+                ]
+            },
+            "case2": {
+                "text": "pass",
+                "ids": []
+            },
+            "case3": {
+                "text": "pass",
+                "ids": []
+            },
+            "case4": {
+                "text": "pass",
+                "ids": []
+            }
+        }
+    },
+    "assets/scene0144_00": {
+        "detection": {
+            "case1": {
+                "text": "<p><strong>User: </strong>List all the chairs visible in this indoor area.(with grounding)</p><p><strong>Assistant:</strong>&nbsp;Yes, I was able to locate <strong>&lt;p&gt; <span style=\"color: #faf025;\">chairs </span>&lt;/p&gt; <span style=\"color: #faf025;\">&lt;ref&gt;</span></strong> in the space for you.</p>",
+                "ids": [
+                    "13_yellow.ply",
+                    "51_yellow.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>Hey, could you do a sweep for all windows in this room, Robot?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;Verification complete. The presence of a <strong>&lt;p&gt; <span style=\"color: #0085BF;\">window</span> &lt;/p&gt; <span style=\"color: #0085BF;\">&lt;ref&gt;</span></strong> in this location is confirmed.</p>",
+                "ids": [
+                    "55.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>Identify all nightstands within this enclosed space.(with grounding)</p><p><strong>Assistant:</strong>&nbsp;<strong>&lt;p&gt; <span style=\"color: #7600BF;\">nightstand</span> &lt;/p&gt; <span style=\"color: #7600BF;\">&lt;ref&gt;</span></strong> is indeed part of the furniture in this indoor scene.</p>",
+                "ids": [
+                    "77.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>Can we get a search going for all the beds in this space?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;Yes, I was able to locate a <strong>&lt;p&gt; <span style=\"color: #BF0022;\">bed</span> &lt;/p&gt; <span style=\"color: #BF0022;\">&lt;ref&gt;</span></strong> in the space for you.</p>",
+                "ids": [
+                    "97.ply"
+                ]
+            }
+        },
+        "grounding": {
+            "case1": {
+                "text": "<p><strong>User: </strong>Can you perform this specific locating task for me: there is a door in the wall; it is to the left of a chair(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've completed the search and found the <strong>&lt;p&gt; <span style=\"color: #5400BF;\">object</span> &lt;/p&gt; <span style=\"color: #5400BF;\">&lt;ref&gt;</span></strong>.</p>",
+                "ids": [
+                    "74.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>I wonder, can you find the item mentioned in this script: this is a white nightstand; it is sitting at the foot of the bed just to the right of a dark dresser?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've pinpointed the <strong>&lt;p&gt; <span style=\"color: #bf00b7;\">object</span> &lt;/p&gt; <span style=\"color: #bf00b7;\">&lt;ref&gt;</span></strong> you're looking for.</p>",
+                "ids": [
+                    "84.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>Your task involves locating something. Here's the detail: this is a reddish brown leather armchair; it is sitting in front of the door and just to the left of the closet(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've pinpointed the <strong>&lt;p&gt; <span style=\"color: #FF9933;\">object</span> &lt;/p&gt; <span style=\"color: #FF9933;\">&lt;ref&gt;</span></strong> you're looking for.</p>",
+                "ids": [
+                    "99_orange.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>Could you assist with locating these objects the white table holds the printer to the left of the bed?(with grounding)</p><p><strong>Assistant:</strong>&nbsp;I've located the <strong>&lt;p&gt; <span style=\"color: #1a00bf;\">object</span> &lt;/p&gt; <span style=\"color: #1a00bf;\">&lt;ref&gt;</span></strong> you're looking for.</p>",
+                "ids": [
+                    "69.ply"
+                ]
+            }
+        },
+        "captioning": {
+            "case1": {
+                "text": "<p><strong>User: </strong>Firstly, describe the visual presentation of the <strong><span style=\"color: #5400bf;\">object&nbsp;&lt;ref&gt;</span></strong>, and subsequently, how it is arranged in its nearby setting.</p><p><strong>Assistant:</strong>&nbsp;this is a white door. it is to the left of a chair.</p>",
+                "ids": [
+                    "74.ply"
+                ]
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>Begin by outlining the visual characteristics of the <strong><span style=\"color: #00B3BF;\">object&nbsp;&lt;ref&gt;</span></strong>, followed by an account of its position relative to the objects around it.</p><p><strong>Assistant:</strong>&nbsp;this is a brown chair. it is against the brown table.</p>",
+                "ids": [
+                    "51.ply"
+                ]
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>Provide a description of the <strong><span style=\"color: #bf0022;\">object&nbsp;&lt;ref&gt;</span></strong>'s appearance and then its spatial relationship with the surrounding area.</p><p><strong>Assistant:</strong>&nbsp;there is a rectangular bed. it is next to a nightstand.</p>",
+                "ids": [
+                    "97.ply"
+                ]
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>Can you outline the main features of the <strong><span style=\"color: #bf00a0;\">object&nbsp;&lt;ref&gt;</span></strong>&nbsp;succinctly?</p><p><strong>Assistant:</strong>&nbsp;A brown wooden desk with a flat top surface.</p>",
+                "ids": [
+                    "86.ply"
+                ]
+            }
+        },
+        "reasoning": {
+            "case1": {
+                "text": "<p><strong>User: </strong>Where is the pillow on the bed? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;on top of bed</p>",
+                "ids": []
+            },
+            "case2": {
+                "text": "<p><strong>User: </strong>What color is the table on the left side of the room? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;brown</p>",
+                "ids": []
+            },
+            "case3": {
+                "text": "<p><strong>User: </strong>How many curtains does the window have? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;2</p>",
+                "ids": []
+            },
+            "case4": {
+                "text": "<p><strong>User: </strong>What is on a small table? Please answer with a single word or phrase.</p><p><strong>Assistant:</strong>&nbsp;lamp</p>",
+                "ids": []
+            }
+        },
+        "dialogue": {
+            "case1": {
+                "text": "<p><p><strong>User: </strong>Can you please fetch the printer from the <strong><span style=\"color: #7600bf;\">nightstand</span></strong> <strong><span style=\"color: #7600bf;\">&lt;ref&gt;</span></strong> and place it on <strong><span style=\"color: #bf00a0;\">&lt;ref&gt;</span></strong>? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Certainly. I will move the <strong>&lt;p&gt; <span style=\"color: #1a00bf;\">printer</span>&nbsp;&lt;/p&gt; <span style=\"color: #1a00bf;\">&lt;ref&gt;</span></strong>&nbsp;to the <strong>&lt;p&gt; <span style=\"color: #bf00a0;\">table</span>&nbsp;&lt;/p&gt; <span style=\"color: #bf00a0;\">&lt;ref&gt;</span></strong>&nbsp;right away.</p><p><strong>User: </strong>That curtain next to the bed has a lovely pattern. Can you tell me about its design? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;The <strong>&lt;p&gt; <span style=\"color: #bf00a0;\">curtain</span>&nbsp;&lt;/p&gt; <span style=\"color: #bf00a0;\">&lt;ref&gt;</span></strong>&nbsp;next to the bed is made of light-colored fabric, possibly white or off-white, with a floral or paisley design.</p><p><strong>User: </strong>Why would there be a printer on the nightstand anyway? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;The&nbsp;<strong>&lt;p&gt; <span style=\"color: #1a00bf;\">printer</span> &lt;/p&gt; <span style=\"color: #1a00bf;\">&lt;ref&gt;</span></strong>&nbsp;is often placed on <strong>&lt;p&gt; <span style=\"color: #7600bf;\">nightstand</span> &lt;/p&gt; <span style=\"color: #7600bf;\">&lt;ref&gt;</span></strong>&nbsp;to provide easy access to documents or other printing materials.</p><p><strong>User: </strong>Is the folding chair next to the bed meant to be there, or should it go with the other chairs? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;The <strong>&lt;p&gt; <span style=\"color: #00b3bf;\">folding chair</span>&nbsp;&lt;/p&gt; <span style=\"color: #00b3bf;\">&lt;ref&gt;</span></strong>&nbsp;is meant to be placed next to <strong>&lt;p&gt; <span style=\"color: #bf0022;\">the bed</span>&nbsp;&lt;/p&gt; <span style=\"color: #bf0022;\">&lt;ref&gt;</span></strong>&nbsp;to provide additional seating.</p><p><strong>User: </strong>Yes, please arrange it with the others and make sure the&nbsp;<strong> <span style=\"color: #faf025;\">chairs</span> <span style=\"color: #faf025;\">&lt;ref&gt;</span></strong> are neatly aligned with the table. (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Understood. I will arrange&nbsp;two&nbsp;<strong>&lt;p&gt; <span style=\"color: #faf025;\">chairs </span>&lt;/p&gt; <span style=\"color: #faf025;\">&lt;ref&gt;</span></strong>&nbsp;at the <strong>&lt;p&gt;&nbsp;<span style=\"color: #bf00a0;\">table</span>&nbsp;&lt;/p&gt; <span style=\"color: #bf00a0;\">&lt;ref&gt;</span></strong>&nbsp;to ensure a tidy setup.</p>",
+                "ids": [
+                    "69.ply",
+                    "86_green.ply",
+                    "77.ply",
+                    "51.ply",
+                    "97.ply",
+                    "13.ply",
+                    "61_blue.ply",
+                    "99_orange.ply",
+                    "47.ply"
+                ]
+            }
+        },
+        "planning": {
+            "case1": {
+                "text": "<p><strong>User: </strong>I desire to enhance room lighting. Can you assist me with this? (with grounding)</p><p><strong>Assistant:</strong>&nbsp;Got it. Let's begin the planning process now.</p><p>step 1. Turn off <strong>&lt;p&gt; <span style=\"color: #1582C5;\">lamp</span> &lt;/p&gt; <span style=\"color: #1582C5;\">&lt;ref&gt;</span></strong>.</p><p>step 2. Dust <strong>&lt;p&gt; <span style=\"color: #1582C5;\">lamp</span> &lt;/p&gt; <span style=\"color: #1582C5;\">&lt;ref&gt;</span></strong> shade.</p><p>step 3. Replace bulb in <strong>&lt;p&gt; <span style=\"color: #1582C5;\">lamp</span> &lt;/p&gt; <span style=\"color: #1582C5;\">&lt;ref&gt;</span></strong>.</p><p>step 4. Turn on <strong>&lt;p&gt; <span style=\"color: #1582C5;\">lamp</span> &lt;/p&gt; <span style=\"color: #1582C5;\">&lt;ref&gt;</span></strong> to test light.</p><p>Planning stage complete. What's our next objective?</p>",
+                "ids": [
+                    "61_blue.ply"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,326 @@
+{
+    "Camera_0": {
+        "type": "camera",
+        "position": [
+            3.0,
+            3.0,
+            3.0
+        ],
+        "look_at": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "up": [
+            0.0,
+            0.0,
+            1.0
+        ]
+    },
+    "RGB Input": {
+        "type": "points",
+        "visible": true,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 237360,
+        "binary_filename": "RGB Input.bin"
+    },
+    "segments; 0 floor": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 54068,
+        "binary_filename": "segments; 0 floor.bin"
+    },
+    "segments; 1 kitchen cabinets": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 6153,
+        "binary_filename": "segments; 1 kitchen cabinets.bin"
+    },
+    "segments; 2 table": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 12971,
+        "binary_filename": "segments; 2 table.bin"
+    },
+    "segments; 3 armchair": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 3243,
+        "binary_filename": "segments; 3 armchair.bin"
+    },
+    "segments; 4 chair": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 3781,
+        "binary_filename": "segments; 4 chair.bin"
+    },
+    "segments; 5 chair": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 3152,
+        "binary_filename": "segments; 5 chair.bin"
+    },
+    "segments; 6 chair": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 3612,
+        "binary_filename": "segments; 6 chair.bin"
+    },
+    "segments; 7 chair": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 2694,
+        "binary_filename": "segments; 7 chair.bin"
+    },
+    "segments; 8 chair": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 3463,
+        "binary_filename": "segments; 8 chair.bin"
+    },
+    "segments; 9 chair": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 3356,
+        "binary_filename": "segments; 9 chair.bin"
+    },
+    "segments; 10 chair": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 3224,
+        "binary_filename": "segments; 10 chair.bin"
+    },
+    "segments; 11 chair": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 3800,
+        "binary_filename": "segments; 11 chair.bin"
+    },
+    "segments; 12 chair": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 3422,
+        "binary_filename": "segments; 12 chair.bin"
+    },
+    "segments; 13 chair": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 2422,
+        "binary_filename": "segments; 13 chair.bin"
+    },
+    "segments; 14 wall": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 6012,
+        "binary_filename": "segments; 14 wall.bin"
+    },
+    "segments; 15 trash can": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 1411,
+        "binary_filename": "segments; 15 trash can.bin"
+    },
+    "segments; 16 wall": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 19770,
+        "binary_filename": "segments; 16 wall.bin"
+    },
+    "segments; 17 table": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 4278,
+        "binary_filename": "segments; 17 table.bin"
+    },
+    "segments; 18 tv": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 9908,
+        "binary_filename": "segments; 18 tv.bin"
+    },
+    "segments; 19 refrigerator": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 4892,
+        "binary_filename": "segments; 19 refrigerator.bin"
+    },
+    "segments; 20 cabinet": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 2166,
+        "binary_filename": "segments; 20 cabinet.bin"
+    },
+    "segments; 21 wall": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 7609,
+        "binary_filename": "segments; 21 wall.bin"
+    },
+    "segments; 22 ceiling": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 2094,
+        "binary_filename": "segments; 22 ceiling.bin"
+    },
+    "segments; 23 window": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 5281,
+        "binary_filename": "segments; 23 window.bin"
+    },
+    "segments; 24 window": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 5590,
+        "binary_filename": "segments; 24 window.bin"
+    },
+    "segments; 25 kitchen counter": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 5743,
+        "binary_filename": "segments; 25 kitchen counter.bin"
+    },
+    "segments; 26 sink": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 1075,
+        "binary_filename": "segments; 26 sink.bin"
+    },
+    "segments; 27 refrigerator": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 6152,
+        "binary_filename": "segments; 27 refrigerator.bin"
+    },
+    "segments; 28 cabinet": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 3535,
+        "binary_filename": "segments; 28 cabinet.bin"
+    },
+    "segments; 29 wall": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 3494,
+        "binary_filename": "segments; 29 wall.bin"
+    },
+    "segments; 30 doors": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 6336,
+        "binary_filename": "segments; 30 doors.bin"
+    },
+    "segments; 31 doorframe": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 1028,
+        "binary_filename": "segments; 31 doorframe.bin"
+    },
+    "segments; 32 trash can": {
+        "type": "points",
+        "visible": false,
+        "alpha": 1.0,
+        "shading_type": 0,
+        "point_size": 25,
+        "num_points": 1148,
+        "binary_filename": "segments; 32 trash can.bin"
+    }
+}
