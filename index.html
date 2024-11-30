@@ -173,19 +173,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Prior studies on 3D scene understanding have primarily developed specialized models for specific tasks or
-              required task-specific fine-tuning. In this study, we propose <i>Grounded 3D-LLM</i>, which explores the
-              potential of 3D large multi-modal models (3D LMMs) to consolidate various 3D vision tasks within a unified
-              generative framework. The model uses scene <i>referent</i> tokens as special noun phrases to reference
-              3D scenes, enabling the handling of sequences that interleave 3D and textual data. It offers a natural
-              approach for translating 3D vision tasks into language formats using task-specific instruction templates.
-              To facilitate the use of <i>referent</i> tokens in subsequent language modeling, we have curated
-              large-scale grounded language datasets that offer finer scene-text correspondence at the phrase level by
-              bootstrapping existing object labels. Subsequently, we introduced Contrastive LAnguage-Scene Pre-training
-              (CLASP) to effectively leverage this data, thereby integrating 3D vision with language models. Our
-              comprehensive evaluation covers open-ended tasks like dense captioning and 3D QA, alongside close-ended
-              tasks such as object detection and language grounding. Experiments across multiple 3D benchmarks reveal
-              the leading performance and the broad applicability of <i>Grounded 3D-LLM</i>.
+              Prior studies on 3D scene understanding have primarily developed specialized models for specific tasks or required task-specific fine-tuning. In this study, we propose <i>Grounded 3D-LLM</i>, which explores the potential of 3D large multi-modal models (3D LMMs) to consolidate various 3D vision tasks within a unified generative framework. The model uses scene <i>referent</i> tokens as special noun phrases to reference 3D scenes, enabling it to handle sequences that interleave 3D and textual data. Per-task instruction-following templates are employed to ensure natural and diversity in translating 3D vision tasks into language formats. To facilitate the use of <i>referent</i> tokens in subsequent language modeling, we provide a large-scale, automatically curated grounded scene-text dataset with over 1 million phrase-to-region correspondences and introduce Contrastive Language-Scene Pre-training (CLASP) to perform phrase-level scene-text alignment using this data. Our comprehensive evaluation covers open-ended tasks like dense captioning and 3D question answering, alongside close-ended tasks such as object detection and language grounding. Experiments across multiple 3D benchmarks reveal the leading performance and the broad applicability of <i>Grounded 3D-LLM</i>.
             </p>
           </div>
         </div>
@@ -217,20 +205,9 @@
             <p>
               <!-- To summarize, our contributions are as follows: -->
             <ul>
-              <li> We developed Grounded 3D-LLM, which first establishes a correspondence between 3D scenes and language
-                phrases through <i>referent</i> tokens. This method enhances scene referencing and effectively
-                supports 3D vision tasks in language modeling, including single- and multi-object grounding, along with
-                introducing 3D detection for the first time.
-              </li>
-              <li> We developed a carefully crafted automated 3D scene caption dataset curation pipeline that provides
-                <i>finer</i> correspondence at the <i>phrase</i> level. Experiments using CLASP in both supervised
-                and zero-shot text settings demonstrate the effectiveness of pre-training on this data for phrase-level
-                scene-text alignment.
-              </li>
-              <li> The <i>Grounded 3D-LLM</i> model tackles 3D grounding and language tasks generatively without the
-                need for specialized models. It achieves top-tier performance in most downstream tasks among generative
-                models, particularly in grounding problems, without task-specific fine-tuning.
-              </li>
+              <li> We propose Grounded 3D-LLM, which establishes correspondence between 3D scenes and natural language using <i>referent</i> tokens. This method facilitates scene referencing and effectively models various 3D vision-language problems within a unified language modeling framework.</li>
+              <li> We first provide an automated, curated grounded scene caption dataset with over <i>1 million</i> phrase-level correspondences. Experiments show that CLASP, using this data in both supervised and zero-shot text settings, demonstrates broad generalization in phrase-level grounding.</li>
+              <li>Without requiring specialized models or task-specific fine-tuning, the single model Grounded 3D-LLM achieves top-tier performance in most downstream tasks among generative models, particularly in grounding problems.</li>      
             </ul>
             </p>
             </p>
@@ -247,10 +224,7 @@
           <h2 class="title is-3">Method</h2>
           <div class="content has-text-justified">
             <p>
-              The training process for Grounded 3D-LLM is divided into two key steps. Firstly, CLASP utilizes extensive
-              scene-text annotations (at the phrase level) to pre-train a 3D point cloud encoder and a cross-modal
-              interactor. The subsequent step involves multi-task instruction tuning, which interlaces <i>referent</i>
-              tokens within the instructions and responses, thereby facilitating flexible 3D scene understanding tasks.
+              To reference phraseable objects in language modeling, a vision-language model is first pre-trained on large-scale grounded scene-text data to align text phrases with their corresponding 3D objects. Subsequently, a large language model (LLM) is fine-tuned using multi-modal instruction-following data, where referent tokens serve as interleaved <i>soft</i> text tokens representing the phraseable objects. Per-task instruction-following templates are employed to address the diverse range of 3D vision tasks within the unified language modeling framework.
             </p>
             </p>
           </div>
@@ -364,21 +338,12 @@
               We propose an automated grounded language dataset generation process utilizing ChatGPT and 2D
               vision-language models to create the Grounded Scene Caption dataset (G-SceneCap):
             <ul>
-              <li><i>Step 1: Bootstrapping object captions with GT label correction.</i> Using 3D real-scan datasets, we
-                annotate each object with the vision-language model CogVLM, using the images of the
-                largest visible areas. Inconsistent annotations are rectified using raw instance labels.
+              <li><i>Step 1: Bootstrapping Object Captioning with GT Label Correction.</i> Using 3D real-scan datasets, we annotate each object with the vision-language model CogVLM~\cite{cogvlm}, using the images of the largest visible areas. Inconsistent annotations are rectified using raw instance labels.
               </li>
-              <li><i>Step 2: Condensing objects in local scenes into a caption.</i>
-                For each enumerated anchor object, we form an initial object set by randomly selecting a group of nearby
-                objects. Their captions and coordinates (x,y,z) are input into GPT-4 for captioning, which requires
-                referencing objects by their IDs in the format ``[object_phrase object_ID]'' in the caption.
+              <li><i>Step 2: Condensing Scene Objects into a Caption.</i> For each enumerated anchor object, we form an initial object set by randomly selecting a group of nearby objects. Their captions and coordinates (x,y,z) are input into GPT-4 for captioning, which requires referencing object phrases with their object IDs in the format "[object_phrase object_ID]" in the caption.
               </li>
               <li>
-                <i>Step 3: Adding Rule-Based Relations into Captions.</i>
-                To enrich scene captions, we integrate program-generated spatial relationships from
-                Sr3D. By selecting an anchor object from the set in <i>step 2</i>, we apply the
-                spatial relation rules (e.g., between, supporting, nearest, back) to include related objects. GPT-4 then
-                combines these relationships into the prior caption from <i>step 2</i>.
+		      <i>Step 3: Adding Rule-Based Relations into Captions.</i> To enrich scene captions, we integrate program-generated spatial relationships from Sr3D. By selecting an anchor object from the set in step 2, we apply the spatial relation rules (e.g., between, supporting, nearest, back) to include related objects. GPT-4 then combines these relationships into the prior caption from step 2.
               </li>
             </ul>
             </p>
